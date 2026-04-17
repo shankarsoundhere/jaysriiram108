@@ -20,7 +20,7 @@ body {
     color: black;
 }
 
-/* Main Container (NEW) */
+/* Main Container */
 .container {
     width: 100%;
     max-width: 1400px;
@@ -54,9 +54,16 @@ body {
 .white { color: white; }
 .green { color: #00ff00; }
 
+/* NEW: Table container for scroll */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
 /* Table */
 table {
     width: 100%;
+    min-width: 600px; /* important */
     border-collapse: collapse;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     border-radius: 10px;
@@ -66,6 +73,7 @@ table {
 th, td {
     padding: 14px;
     border: 1px solid #ddd;
+    word-break: break-word; /* NEW */
 }
 
 th {
@@ -89,11 +97,33 @@ tr:hover {
 
 /* Mobile Responsive */
 @media(max-width:600px){
-    .led-text { font-size: 20px; }
-    th, td { font-size: 12px; padding: 8px; }
+    .led-text { font-size: 18px; }
+
+    th, td { 
+        font-size: 11px; 
+        padding: 6px; 
+    }
 }
 </style>
 
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="led-board">
+    <div class="led-text">
+        <span class="saffron">शंकर टेंट हाउस</span> 
+        <span class="white">लखीसराय</span> 
+        <span class="green">7004814456 , 6200164687</span>
+    </div>
+</div>
+
+<!-- NEW: table container -->
+<div class="table-container">
+
+<table>
 </head>
 
 <body>
